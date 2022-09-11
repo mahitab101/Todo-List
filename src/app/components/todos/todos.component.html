@@ -10,7 +10,7 @@
     <p [hidden]="!form.submitted || nameField.valid" class="alert alert-danger p-1">Enter The task</p>
 
 </form> -->
-<h3 class="mt-5">Task Board <span class="badge badge-dark bg-dark">{{todoLength}}</span></h3> 
+<h3 class="mt-5">Task Board <span class="badge badge-dark bg-bink">{{todoLength}}</span></h3> 
 <form [formGroup]="toDoForm" class="form-inline my-4 ">
     <div class="input-group">
         <input type="text" class="form-control" formControlName="toDoInput" placeholder="Enter Your Task..." required />

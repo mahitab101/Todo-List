@@ -48,4 +48,8 @@
     padding: 10px;
     border-radius: 5px;
     margin: 0 auto;
-  }
+}
+.bg-bink{
+    background-color: #FE4880;
+    border-radius: 50%;
+ }
