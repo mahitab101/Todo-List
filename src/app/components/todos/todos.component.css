@@ -1,0 +1,51 @@
+.todo{
+    background: #fff;
+    background: #fff;
+    /* color: #183153; */
+    padding: 12px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    color:rgb(68, 64, 64);
+    -o-border-radius: 10px;
+}
+.todo:hover{
+    border: #FE4880 1px solid;
+}
+.todo.done .content{
+    text-decoration: line-through;
+    color:rgb(93, 91, 91);
+    font-style: italic;
+}
+.todo .content{
+   cursor: pointer;
+}
+.btn-success{
+    background-color: #183153;
+    border:1px solid #20406c;
+}
+.btn-success:hover{
+    background-color: #20406c;
+
+}
+.todo img{
+    width: 20px;
+    height: 20px;
+   cursor: pointer;
+}
+.field-error{
+    border: 1px red solid;
+}
+.todo-submit:disabled{
+    cursor: not-allowed;
+}
+.spinner-border{
+    font-size: 10px;
+}
+.error{
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 auto;
+  }

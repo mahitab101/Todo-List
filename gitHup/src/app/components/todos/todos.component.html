@@ -1,0 +1,33 @@
+
+
+<form (submit)="addTodo()" #form="ngForm" class="form-inline my-4 ">
+    <div class="input-group">
+        <input type="text" class="form-control" name="inputTodo" placeholder="Enter Your Task..."
+            [(ngModel)]="inputTodo" required #nameField="ngModel"
+            [class.field-error]="form.submitted && nameField.invalid"/>
+        <div class="input-group-append">
+            <input type="submit" value="Add" class="todo-submit btn btn-success" [disabled] = "!form.valid"/>
+        </div>
+    </div>
+    <p [hidden]="!form.submitted || nameField.valid" class="alert alert-danger p-1">Enter The task</p>
+
+</form>
+
+<!-- d-flex justify-content-start align-items-start -->
+<div *ngFor="let item of todos; let i = index" class="mb-2 todo {{(item.completed?'done':'')}}" >
+    <div class="row">
+        <span class="id" hidden>{{i}}</span>
+        <div class="content col-6 d-flex justify-content-start" (click)="toggleDone(i)">
+            {{item.content}}
+        </div>
+        <div class="col-6 d-flex justify-content-end">
+            <img class="img-fluid " src="assets/images/external-Delete-ui-flat-icons-inmotus-design.png" alt=""
+            (click)="deleteTodo(i)">
+        </div>
+    </div>
+</div>
+<div class="text-center my-5" *ngIf="isLoading">
+    <div class="spinner-border" role="status" >
+        <span class="sr-only">Loading...</span>
+    </div>
+    </div>
