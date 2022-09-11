@@ -13,7 +13,7 @@ export class TodosComponent implements OnInit {
   isLoading: boolean = false;
   formData: any = {};
   submitted = false;
-  todoLength!:number;
+  todoLength:number | undefined;
   // toDoForm: FormGroup = new FormGroup<Todo>;
   constructor() {}
 
@@ -46,6 +46,7 @@ export class TodosComponent implements OnInit {
   deleteTodo(id: number) {
     this.todos = this.todos.filter((v, i) => i !== id);
     console.log('removed :', id);
+    this.todoLength=this.todos.length;
   }
   addTodo() {
     this.isLoading = true;
