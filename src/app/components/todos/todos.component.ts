@@ -13,7 +13,7 @@ export class TodosComponent implements OnInit {
   isLoading: boolean = false;
   formData: any = {};
   submitted = false;
-  todoLength=2;
+  todoLength!:number;
   // toDoForm: FormGroup = new FormGroup<Todo>;
   constructor() {}
 
@@ -32,7 +32,7 @@ export class TodosComponent implements OnInit {
         completed: false,
       },
     ];
-    
+    this.todoLength=this.todos.length;
     console.log( "this.todoLength>>>>",this.todoLength);
     
   }
